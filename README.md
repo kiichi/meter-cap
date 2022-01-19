@@ -37,8 +37,8 @@ Here is my todo:
 
 ## Avoid Screenlock
 
-[richtr/NoSleep.js: Prevent display sleep and enable wake lock in any Android or iOS web browser.](https://github.com/richtr/NoSleep.js/)
-[Screen Wake Lock API](https://w3c.github.io/screen-wake-lock/)
+- [richtr/NoSleep.js: Prevent display sleep and enable wake lock in any Android or iOS web browser.](https://github.com/richtr/NoSleep.js/)
+- [Screen Wake Lock API](https://w3c.github.io/screen-wake-lock/)
 
 ## Website
-[Pico.css • Minimal CSS Framework for semantic HTML](https://picocss.com/)
+- [Pico.css • Minimal CSS Framework for semantic HTML](https://picocss.com/)
