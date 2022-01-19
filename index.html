@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./assets/css/pico.min.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<script type="text/javascript" src="./assets/scripts/tesseract.min.js"></script>
+	<script src="./assets/scripts/nosleep.min.js"></script>
+	<script src="./app.js"></script>
+	<title>Meter Cap - 7 segment digital display capture</title>
+</head>
+
+<body>
+	<main class="container">
+		<div class="grid">
+		<div id="video-container">
+			<video id="player" controls width="320" height="240"></video>
+			<div id="rect"></div>
+		</div>
+		<div id="snapshot-container">
+			<canvas id="snapshot" width="320" height="240"></canvas>
+		</div>
+		</div>
+		<div id="progress-container">
+			<progress id="progress"></progress>
+		</div>
+		<button id="capture" aria-busy="false">Capture</button>
+		<textarea id="result"></textarea>
+		<details>
+			<summary>Settings</summary>
+			<div class="grid">
+				<div>
+				<label for="auto">
+					<input type="checkbox" name="auto" onchange="toggleTimer(this)" />
+					Auto Capture
+				</label>
+				<label for="awake">
+					<input type="checkbox" name="awake" onchange="toggleAwake(this)" />
+					Keep me awake
+				</label>
+				</div>
+				<div>
+					<label>
+						Interval (sec)
+						<input type="number" name="duration" value="10" onchange="setIntervalChange(this)" />
+					</label>
+				</div>
+			</div>
+		</details>
+		
+	</main>
+	<script>
+		document.addEventListener("DOMContentLoaded", function (event) {
+			init();
+		});
+	</script>
+</body>
+
+</html>
