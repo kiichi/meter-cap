@@ -1,4 +1,4 @@
-# Digital Meater Capture
+# Digital Meter Capture
 
 This is a web-based OCR App to read 7 Segment Digital Display. I created this to monitor temperature but it could be applicable for any casual data capturing usage. Don't use this as critical bottle neck of the system; such as, kill-switch for your stove.
 
