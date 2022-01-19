@@ -63,11 +63,12 @@ function capture(){
 		await worker.loadLanguage(lang);
 		await worker.initialize(lang);
 
-		// await worker.setParameters({
-		// 	tessedit_pageseg_mode: Tesseract.PSM.SINGLE_BLOCK,
-		// 	tessedit_char_blacklist: "!?@#$%&*()<>_-+=/:;'\"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-		// 	tessedit_char_whitelist: '0123456789'
-		// });
+		await worker.setParameters({
+			tessedit_pageseg_mode: Tesseract.PSM.SINGLE_BLOCK,
+			//tessedit_char_blacklist: "!?@#$%&*()<>_-+=/:;'\"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+			tessedit_char_blacklist: "!?@#$%&*()<>_-+=/;'\"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+			tessedit_char_whitelist: '0123456789:'
+		});
 		const { data: { text } } = await worker.recognize(snapshotZone,{rectangle:rectangle});
 		// no rect
 		console.log(text);
