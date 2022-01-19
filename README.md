@@ -2,6 +2,8 @@
 
 This is a web-based OCR App to read 7 Segment Digital Display. I created this to monitor temperature but it could be applicable for any casual data capturing usage. Don't use this as critical bottle neck of the system; such as, kill-switch for your stove.
 
+<img src="https://raw.githubusercontent.com/kiichi/meter-cap/main/examples/example.gif"/>
+
 This is PoC level but it's working somewhat. This app uses Tessaract JS, NoSleep.js, and Pico CSS. For training data, it seems that Adrian Lazaro's training data, SSD seems work the best. 
 
 # How to use
